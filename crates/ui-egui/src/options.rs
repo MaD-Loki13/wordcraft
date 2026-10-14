@@ -336,10 +336,13 @@ fn save(app: &mut WordApp, ui: &mut Ui) {
 }
 
 fn language(app: &mut WordApp, ui: &mut Ui) {
-    section(ui, "Interface language");
-    language_picker(app, ui);
-    // #414 (detect the document's language) goes here.
-    ui.add_space(8.0);
+    // DoeringCraft: the web build is always German, so it offers no interface language choice.
+    if cfg!(not(target_arch = "wasm32")) {
+        section(ui, "Interface language");
+        language_picker(app, ui);
+        // #414 (detect the document's language) goes here.
+        ui.add_space(8.0);
+    }
     section(ui, "Proofing language");
     note(ui, "Spelling and grammar are checked in English (United States).");
 }

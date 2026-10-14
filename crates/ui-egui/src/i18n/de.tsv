@@ -1281,7 +1281,7 @@
 	{cols}×{rows} Table	{cols}×{rows}-Tabelle
 	AaBbYyZz	AaBbYyZz
 	pt	pt
-	Document1	Document1
+	Document1	Dokument1
 	Username	Benutzername
 	Display name	Anzeigename
 	Real name	Echter Name
@@ -1298,7 +1298,7 @@
 	Studio	Studio
 	Atelier	Atelier
 	Darkroom	Darkroom
-	Gallery	Gallery
+	Gallery	Katalog
 	Sketchbook	Sketchbook
 	Change Picture…	Bild ändern…
 	Font…	Schriftart…
@@ -2084,3 +2084,391 @@
 	Leave out the date and time of comments and tracked changes when saving	Beim Speichern Datum und Uhrzeit von Kommentaren und nachverfolgten Änderungen weglassen
 	The document you are editing keeps the names and dates; only the saved file leaves them out.	Das bearbeitete Dokument behält Namen und Daten; nur die gespeicherte Datei lässt sie weg.
 	Privacy Settings	Aktuelle Datenschutzeinstellungen
+# DoeringCraft: entries the German catalog lacked (written for the Doering Dashboard, 14.10.2026).
+	Wildcards (regex)	Platzhalter (regulärer Ausdruck)
+	Track\nChanges	Änderungen\nnachverfolgen
+	Track\nChanges ✓	Änderungen\nnachverfolgen ✓
+	Subject	Thema
+	Keywords	Stichwörter
+	Category	Kategorie
+	Good morning	Guten Morgen
+	Good afternoon	Guten Tag
+	Good evening	Guten Abend
+	Contributors	Mitwirkende
+	Models	Modelle
+	Typing	Eingabe
+	Bayes' rule	Satz von Bayes
+	Binomial expansion of (x+a)ⁿ	Binomische Entwicklung von (x+a)ⁿ
+	Circle area from its radius	Kreisfläche aus dem Radius
+	Convert between built-up and linear form	Zwischen professioneller und linearer Form umschalten
+	Derivative as a limit	Ableitung als Grenzwert
+	Euler's identity	Eulersche Identität
+	Exponential series	Exponentialreihe
+	Integral of e^(−x²)	Integral von e^(−x²)
+	Justification of a display equation	Ausrichtung einer abgesetzten Formel
+	Normal probability density	Dichte der Normalverteilung
+	Number the equation; the number sits at the right margin (or type # then the number)	Formel nummerieren; die Nummer steht am rechten Rand (oder # und dann die Nummer eingeben)
+	Power series of (1+x)ⁿ	Potenzreihe von (1+x)ⁿ
+	Roots of ax²+bx+c	Nullstellen von ax²+bx+c
+	Show the equation in the line of text	Formel in der Textzeile anzeigen
+	Show the equation on a line of its own	Formel in eigener Zeile anzeigen
+	Sides of a right triangle	Seiten eines rechtwinkligen Dreiecks
+	Sine and cosine series of f(x)	Sinus- und Kosinusreihe von f(x)
+	Sum of cosines	Summe von Kosinus
+	Sum or difference of sines	Summe oder Differenz von Sinus
+	Type equations in LaTeX	Formeln in LaTeX eingeben
+	Type equations in the linear format (UnicodeMath)	Formeln im linearen Format eingeben (UnicodeMath)
+	Type normal (non-math) text in the equation	Normalen Text (kein mathematischer Text) in der Formel eingeben
+	Change to Level 1	In Ebene 1 ändern
+	Change to Level 2	In Ebene 2 ändern
+	Change to Level 3	In Ebene 3 ändern
+	Change to Level 4	In Ebene 4 ändern
+	Change to Level 5	In Ebene 5 ändern
+	Change to Level 6	In Ebene 6 ändern
+	Change to Level 7	In Ebene 7 ändern
+	Change to Level 8	In Ebene 8 ändern
+	Change to Level 9	In Ebene 9 ändern
+	Level 1	Ebene 1
+	Level 2	Ebene 2
+	Level 3	Ebene 3
+	Level 4	Ebene 4
+	Level 5	Ebene 5
+	Level 6	Ebene 6
+	Level 7	Ebene 7
+	Level 8	Ebene 8
+	Level 9	Ebene 9
+	Style: APA	Stil: APA
+	1×2 Empty Matrix	Leere 1×2-Matrix
+	1×3 Empty Matrix	Leere 1×3-Matrix
+	2×1 Empty Matrix	Leere 2×1-Matrix
+	2×2 Determinant	2×2-Determinante
+	2×2 Empty Matrix	Leere 2×2-Matrix
+	2×2 Identity Matrix	2×2-Einheitsmatrix
+	2×2 Identity Matrix (sparse)	2×2-Einheitsmatrix (dünn besetzt)
+	2×2 Matrix in Brackets	2×2-Matrix in eckigen Klammern
+	2×2 Matrix in Double Bars	2×2-Matrix in doppelten senkrechten Strichen
+	2×2 Matrix in Parentheses	2×2-Matrix in runden Klammern
+	2×3 Empty Matrix	Leere 2×3-Matrix
+	3×1 Empty Matrix	Leere 3×1-Matrix
+	3×2 Empty Matrix	Leere 3×2-Matrix
+	3×3 Empty Matrix	Leere 3×3-Matrix
+	3×3 Identity Matrix	3×3-Einheitsmatrix
+	3×3 Identity Matrix (sparse)	3×3-Einheitsmatrix (dünn besetzt)
+	A xor B	A xor B
+	ASAP	DRINGEND
+	AaBbCcDd	AaBbCcDd
+	Absolute value cases	Fallunterscheidung Betrag
+	Accents	Akzente
+	Acute	Akut
+	All - Linear	Alle – linear
+	All - Professional	Alle – professionell
+	Angle Brackets	Spitze Klammern
+	Angle Brackets with Separator	Spitze Klammern mit Trennzeichen
+	Angle Brackets with Two Separators	Spitze Klammern mit zwei Trennzeichen
+	Annotation Reference	Kommentarzeichen
+	Annotation Subject	Kommentarthema
+	Annotation Text	Kommentartext
+	B4 (JIS)   10.12" × 14.33"	B4 (JIS)   25,7 × 36,4 cm
+	B5 (JIS)   7.17" × 10.12"	B5 (JIS)   18,2 × 25,7 cm
+	Baseline Dots	Punkte auf der Grundlinie
+	Basic Math	Grundlegende Mathematik
+	Binomial Coefficient	Binomialkoeffizient
+	Binomial Coefficient (angle)	Binomialkoeffizient (spitze Klammern)
+	Binomial Coefficient with Angle Brackets	Binomialkoeffizient mit spitzen Klammern
+	Body text in a short paragraph to show spacing.	Fließtext in einem kurzen Absatz, um die Abstände zu zeigen.
+	Boxed Formula	Formel im Rahmen
+	Boxed Formula (example)	Formel im Rahmen (Beispiel)
+	Boxed Formulas	Formeln im Rahmen
+	Braces	Geschweifte Klammern
+	Braces with Separator	Geschweifte Klammern mit Trennzeichen
+	Brackets	Klammern
+	Brackets with Separators	Klammern mit Trennzeichen
+	Breve	Breve
+	CONFIDENTIAL	VERTRAULICH
+	Cases (Three Conditions)	Fälle (drei Bedingungen)
+	Cases (Two Conditions)	Fälle (zwei Bedingungen)
+	Cases and Stacks	Fälle und Stapel
+	Ceiling	Aufrunden
+	Centered as Group	Als Gruppe zentriert
+	Change in y over change in x	Änderung von y durch Änderung von x
+	Check	Häkchen
+	Circled Dot	Punkt im Kreis
+	Circled Plus	Plus im Kreis
+	Circled Times	Mal im Kreis
+	Colon Equal	Doppelpunkt gleich
+	Common Accent Objects	Häufige Akzente
+	Common Brackets	Häufige Klammern
+	Common Fractions	Häufige Brüche
+	Common Functions	Häufige Funktionen
+	Common Large Operators	Häufige große Operatoren
+	Common Operator Structures	Häufige Operatorstrukturen
+	Common Operators	Häufige Operatoren
+	Common Radicals	Häufige Wurzeln
+	Common Subscripts and Superscripts	Häufige Tief- und Hochstellungen
+	Contour Integral	Kurvenintegral
+	Contour Integral with Limits	Kurvenintegral mit Grenzen
+	Contour Integral with Stacked Limits	Kurvenintegral mit gestapelten Grenzen
+	Contour Integrals	Kurvenintegrale
+	Coproduct	Koprodukt
+	Coproduct with Limits	Koprodukt mit Grenzen
+	Coproduct with Lower Limit	Koprodukt mit unterer Grenze
+	Coproduct with Subscript-Superscript Limits	Koprodukt mit tief- und hochgestellten Grenzen
+	Cosecant Function	Kosekansfunktion
+	Cosine 2x	Kosinus 2x
+	Cosine Function	Kosinusfunktion
+	Cotangent Function	Kotangensfunktion
+	Cube Root	Kubikwurzel
+	Current - Linear	Aktuell – linear
+	Current - Professional	Aktuell – professionell
+	DO NOT COPY	NICHT KOPIEREN
+	Default Paragraph Font	Absatz-Standardschriftart
+	Delta Equal To	Delta gleich
+	Delta over arrow	Delta über Pfeil
+	Diagonal Dots	Diagonale Punkte
+	Differential	Differential
+	Differential theta	Differential Theta
+	Differential x	Differential x
+	Differential y	Differential y
+	Differentials	Differentiale
+	Dot	Punkt
+	Dots	Punkte
+	Double Bar	Doppelter Strich
+	Double Dot	Doppelpunkt oben
+	Double Integral	Doppelintegral
+	Double Integral with Limits	Doppelintegral mit Grenzen
+	Double Integral with Stacked Limits	Doppelintegral mit gestapelten Grenzen
+	Double Left Arrow with Text Above	Doppelpfeil nach links mit Text darüber
+	Double Left Arrow with Text Below	Doppelpfeil nach links mit Text darunter
+	Double Left Right Arrow with Text Above	Doppelpfeil nach links und rechts mit Text darüber
+	Double Left Right Arrow with Text Below	Doppelpfeil nach links und rechts mit Text darunter
+	Double Right Arrow with Text Above	Doppelpfeil nach rechts mit Text darüber
+	Double Right Arrow with Text Below	Doppelpfeil nach rechts mit Text darunter
+	Double Square Brackets	Doppelte eckige Klammern
+	Double Vertical Bars	Doppelte senkrechte Striche
+	Double summation	Doppelsumme
+	Emphasis	Hervorhebung
+	Empty Matrices	Leere Matrizen
+	Endnote Reference	Endnotenzeichen
+	Endnote Text	Endnotentext
+	Envelope #10   4.12" × 9.50"	Umschlag #10   10,5 × 24,1 cm
+	Envelope Address	Umschlagadresse
+	Envelope DL   4.33" × 8.66"	Umschlag DL   11 × 22 cm
+	Envelope Return	Umschlagabsenderadresse
+	Equal Equal	Gleich gleich
+	Equal by Definition	Gleich per Definition
+	Executive   7.25" × 10.50"	Executive   18,4 × 26,7 cm
+	Exponential	Exponentialfunktion
+	Floor	Abrunden
+	Footnote Reference	Fußnotenzeichen
+	Footnote Text	Fußnotentext
+	Functions	Funktionen
+	Geometry	Geometrie
+	Grave	Gravis
+	Greek Letters	Griechische Buchstaben
+	Grid Table 1 Light	Gitternetztabelle 1 hell
+	Grid Table 4 – Blue	Gitternetztabelle 4 – Blau
+	Grid Table 4 – Green	Gitternetztabelle 4 – Grün
+	Grid Table 4 – Orange	Gitternetztabelle 4 – Orange
+	Grid Table 4 – Purple	Gitternetztabelle 4 – Lila
+	Grouping Character Above	Gruppierungszeichen oben
+	Grouping Character Below	Gruppierungszeichen unten
+	Hat	Dach
+	Hyperbolic Cosecant Function	Hyperbolische Kosekansfunktion
+	Hyperbolic Cosine Function	Hyperbolische Kosinusfunktion
+	Hyperbolic Cotangent Function	Hyperbolische Kotangensfunktion
+	Hyperbolic Functions	Hyperbelfunktionen
+	Hyperbolic Secant Function	Hyperbolische Sekansfunktion
+	Hyperbolic Sine Function	Hyperbolische Sinusfunktion
+	Hyperbolic Tangent Function	Hyperbolische Tangensfunktion
+	Hyperlink	Hyperlink
+	Hypotenuse	Hypotenuse
+	Identity Matrices	Einheitsmatrizen
+	Index Heading	Indexüberschrift
+	Index {n}	Index {n}
+	Integral with Limits	Integral mit Grenzen
+	Integral with Stacked Limits	Integral mit gestapelten Grenzen
+	Integrals	Integrale
+	Intense Emphasis	Intensive Hervorhebung
+	Intense Quote	Intensives Zitat
+	Intense Reference	Intensiver Verweis
+	Intersection	Schnittmenge
+	Intersection with Limits	Schnittmenge mit Grenzen
+	Intersection with Lower Limit	Schnittmenge mit unterer Grenze
+	Intersection with Subscript-Superscript Limits	Schnittmenge mit tief- und hochgestellten Grenzen
+	Inverse Cosecant Function	Arkuskosekansfunktion
+	Inverse Cosine Function	Arkuskosinusfunktion
+	Inverse Cotangent Function	Arkuskotangensfunktion
+	Inverse Functions	Umkehrfunktionen
+	Inverse Hyperbolic Cosecant Function	Areakosekansfunktion
+	Inverse Hyperbolic Cosine Function	Areakosinusfunktion
+	Inverse Hyperbolic Cotangent Function	Areakotangensfunktion
+	Inverse Hyperbolic Functions	Areafunktionen
+	Inverse Hyperbolic Secant Function	Areasekansfunktion
+	Inverse Hyperbolic Sine Function	Areasinusfunktion
+	Inverse Hyperbolic Tangent Function	Areatangensfunktion
+	Inverse Secant Function	Arkussekansfunktion
+	Inverse Sine Function	Arkussinusfunktion
+	Inverse Tangent Function	Arkustangensfunktion
+	Left Arrow with Text Above	Pfeil nach links mit Text darüber
+	Left Arrow with Text Below	Pfeil nach links mit Text darunter
+	Left Bracket Twice	Linke Klammer doppelt
+	Left Right Arrow Above	Pfeil nach links und rechts oben
+	Left Right Arrow with Text Above	Pfeil nach links und rechts mit Text darüber
+	Left Right Arrow with Text Below	Pfeil nach links und rechts mit Text darunter
+	Left Subscript-Superscript	Links tief- und hochgestellt
+	Leftwards Arrow Above	Pfeil nach links oben
+	Leftwards Harpoon Above	Harpune nach links oben
+	Legal   8.50" × 14.00"	Legal   21,6 × 35,6 cm
+	Letter   8.50" × 11.00"	Letter   21,6 × 27,9 cm
+	Letter-Like Symbols	Buchstabenähnliche Symbole
+	Limit	Grenzwert
+	Limit Example	Grenzwert (Beispiel)
+	Line Number	Zeilennummer
+	Linear Fraction	Linearer Bruch
+	List Paragraph	Listenabsatz
+	List Table 3 – Blue	Listentabelle 3 – Blau
+	List Table 3 – Green	Listentabelle 3 – Grün
+	List Table 3 – Orange	Listentabelle 3 – Orange
+	List Table 3 – Purple	Listentabelle 3 – Lila
+	Logarithm	Logarithmus
+	Logarithm with Base	Logarithmus mit Basis
+	Logical AND	Logisches UND
+	Logical AND with Limits	Logisches UND mit Grenzen
+	Logical OR	Logisches ODER
+	Logical OR with Limits	Logisches ODER mit Grenzen
+	Matrices with Brackets	Matrizen mit Klammern
+	Maximum	Maximum
+	Maximum Example	Maximum (Beispiel)
+	Measured By	Gemessen durch
+	Midline Dots	Punkte auf Mittellinie
+	Minimum	Minimum
+	Minus Equal	Minus gleich
+	Natural Logarithm	Natürlicher Logarithmus
+	Negated Relations	Verneinte Relationen
+	No Spacing	Kein Leerraum
+	Normal	Standard
+	Normal Indent	Standardeinzug
+	Normal Table	Normale Tabelle
+	One half	Ein Halb
+	Operator Structures	Operatorstrukturen
+	Operators	Operatoren
+	Other Large Operators	Weitere große Operatoren
+	Outward Brackets	Nach außen gerichtete Klammern
+	Overbar	Überstrich
+	Overbars and Underbars	Über- und Unterstriche
+	Overbrace	Geschweifte Klammer oben
+	Parentheses	Runde Klammern
+	Parentheses with Separator	Runde Klammern mit Trennzeichen
+	Partial Differential	Partielles Differential
+	Pi Over 2	Pi halbe
+	Plain Table 1	Einfache Tabelle 1
+	Plus Equal	Plus gleich
+	Product	Produkt
+	Product of A	Produkt von A
+	Product with Limits	Produkt mit Grenzen
+	Product with Lower Limit	Produkt mit unterer Grenze
+	Product with Subscript-Superscript Limits	Produkt mit tief- und hochgestellten Grenzen
+	Products and Coproducts	Produkte und Koprodukte
+	Quadratic Root	Quadratwurzel
+	Quote	Zitat
+	Radical with Degree	Wurzel mit Grad
+	Radicals	Wurzeln
+	Right Arrow with Text Above	Pfeil nach rechts mit Text darüber
+	Right Arrow with Text Below	Pfeil nach rechts mit Text darunter
+	Right Bracket Twice	Rechte Klammer doppelt
+	Rightwards Arrow Above	Pfeil nach rechts oben
+	Rightwards Harpoon Above	Harpune nach rechts oben
+	SAMPLE	MUSTER
+	Scripts	Hoch- und Tiefstellungen
+	Secant Function	Sekansfunktion
+	Sine Function	Sinusfunktion
+	Sine theta	Sinus Theta
+	Single Brackets	Einzelne Klammern
+	Single Left Angle	Einzelne linke spitze Klammer
+	Single Left Bar	Einzelner linker Strich
+	Single Left Brace	Einzelne linke geschweifte Klammer
+	Single Left Bracket	Einzelne linke eckige Klammer
+	Single Left Parenthesis	Einzelne linke runde Klammer
+	Single Right Brace	Einzelne rechte geschweifte Klammer
+	Single Right Bracket	Einzelne rechte eckige Klammer
+	Single Right Parenthesis	Einzelne rechte runde Klammer
+	Skewed Fraction	Schräger Bruch
+	Small change	Kleine Änderung
+	Sparse Matrices	Dünn besetzte Matrizen
+	Square Root	Quadratwurzel
+	Square Root with Degree	Quadratwurzel mit Grad
+	Square Union	Eckige Vereinigung
+	Stack Object	Stapelobjekt
+	Stack Object (Three)	Stapelobjekt (drei)
+	Stacked Fraction	Gestapelter Bruch
+	Stacked, no bar	Gestapelt, ohne Bruchstrich
+	Statement   5.50" × 8.50"	Statement   14 × 21,6 cm
+	Strong	Fett
+	Subscript-Superscript	Tief-/Hochgestellt
+	Subscripts and Superscripts	Tief- und Hochstellungen
+	Subtitle	Untertitel
+	Subtle Emphasis	Schwache Hervorhebung
+	Subtle Reference	Schwacher Verweis
+	Summation	Summe
+	Summation from 0 to n	Summe von 0 bis n
+	Summation over binomials	Summe über Binomialkoeffizienten
+	Summation with Limits	Summe mit Grenzen
+	Summation with Lower Limit	Summe mit unterer Grenze
+	Summation with Subscript Limit	Summe mit tiefgestellter Grenze
+	Summation with Subscript-Superscript Limits	Summe mit tief- und hochgestellten Grenzen
+	Summations	Summen
+	Surface Integral	Oberflächenintegral
+	Surface Integral with Limits	Oberflächenintegral mit Grenzen
+	Surface Integral with Stacked Limits	Oberflächenintegral mit gestapelten Grenzen
+	TOA Heading	Rechtsgrundlagenverzeichnis-Überschrift
+	TOC Heading	Inhaltsverzeichnisüberschrift
+	TOC {n}	Verzeichnis {n}
+	Table Grid	Tabellenraster
+	Table of Figures	Abbildungsverzeichnis
+	Tabloid   11.00" × 17.00"	Tabloid   27,9 × 43,2 cm
+	Tangent Function	Tangensfunktion
+	Tangent formula	Tangensformel
+	Text over Colon Equal	Text über Doppelpunkt gleich
+	Text over Equal	Text über Gleichheitszeichen
+	Tilde	Tilde
+	Trigonometric Functions	Trigonometrische Funktionen
+	Triple Dot	Drei Punkte oben
+	Triple Integral	Dreifachintegral
+	Triple Integral with Limits	Dreifachintegral mit Grenzen
+	Triple Integral with Stacked Limits	Dreifachintegral mit gestapelten Grenzen
+	URGENT	EILT
+	Underbar	Unterstrich
+	Underbrace	Geschweifte Klammer unten
+	Union	Vereinigung
+	Union of intersections	Vereinigung von Schnittmengen
+	Union with Limits	Vereinigung mit Grenzen
+	Union with Lower Limit	Vereinigung mit unterer Grenze
+	Union with Plus	Vereinigung mit Plus
+	Union with Subscript-Superscript Limits	Vereinigung mit tief- und hochgestellten Grenzen
+	Unions and Intersections	Vereinigungen und Schnittmengen
+	Up Diagonal Dots	Diagonale Punkte nach oben
+	Vector A	Vektor A
+	Vector AB	Vektor AB
+	Vertical Bars	Senkrechte Striche
+	Vertical Dots	Senkrechte Punkte
+	Volume Integral	Volumenintegral
+	Volume Integral with Limits	Volumenintegral mit Grenzen
+	Volume Integral with Stacked Limits	Volumenintegral mit gestapelten Grenzen
+	Yields	Ergibt
+	n×n Identity Matrix	n×n-Einheitsmatrix
+	n×n Matrix	n×n-Matrix
+	tOGGLE cASE	gROSS-/kLEINSCHREIBUNG umkehren
+	✓ None	✓ Keine
+preview	Title	Beispiel
+	Large	Groß
+	Limit and	Grenzwert und
+	Log	Log
+	➕ New comment	➕ Neuer Kommentar
+	📂  Browse…	📂  Durchsuchen…
+	Possible spelling mistake	Möglicher Rechtschreibfehler
+	Extra space	Überflüssiges Leerzeichen
+	Capitalize the first word of a sentence	Erstes Wort eines Satzes großschreiben
+	Remove the space before the punctuation	Leerzeichen vor dem Satzzeichen entfernen
+	Use "an" before a vowel sound	„an“ vor einem Vokal verwenden
+	Use "a" before a consonant sound	„a“ vor einem Konsonanten verwenden
+	The spelling and grammar check is complete.	Die Rechtschreib- und Grammatikprüfung ist abgeschlossen.
