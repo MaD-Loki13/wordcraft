@@ -73,6 +73,12 @@ pub fn start() {
                         if let Some(author) = crate::host::query_param("author") {
                             crate::host::Bridge::set_author(&mut app, &author);
                         }
+                        // DoeringCraft: `?theme=hell|dunkel` (or light|dark) pins the theme to the host page's.
+                        match crate::host::query_param("theme").as_deref() {
+                            Some("dunkel" | "dark") => app.ui.theme = wordcraft_ui_egui::theme::Appearance::Dark,
+                            Some("hell" | "light") => app.ui.theme = wordcraft_ui_egui::theme::Appearance::Light,
+                            _ => {}
+                        }
                         bridge.post_ready();
                     } else if !sample {
                         // No document to show: start on File › Home, as the desktop app does (#766).
