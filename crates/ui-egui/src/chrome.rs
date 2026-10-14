@@ -256,13 +256,15 @@ pub fn title_bar(app: &mut WordApp, ui: &mut Ui) {
                 quick_access(ui, app);
                 qat_end = ui.min_rect().max.x;
                 ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-                    // Account / community.
-                    let (r, resp) = ui.allocate_exact_size(vec2(control_h, control_h), Sense::click());
-                    ui.painter().circle_filled(r.center(), control_h / 2.0 - 1.0, t.accent);
-                    let initials: String = app.session.user_initials().chars().take(2).collect();
-                    ui.painter().text(r.center(), Align2::CENTER_CENTER, initials, semibold(10.5), t.on_accent);
-                    resp.on_hover_text(format!("{} — set your name in File › Options", app.session.author));
-                    ui.add_space(8.0);
+                    // Account / community. DoeringCraft: embedded, the Dashboard shows who is signed in.
+                    if !app.ui.embedded {
+                        let (r, resp) = ui.allocate_exact_size(vec2(control_h, control_h), Sense::click());
+                        ui.painter().circle_filled(r.center(), control_h / 2.0 - 1.0, t.accent);
+                        let initials: String = app.session.user_initials().chars().take(2).collect();
+                        ui.painter().text(r.center(), Align2::CENTER_CENTER, initials, semibold(10.5), t.on_accent);
+                        resp.on_hover_text(format!("{} — set your name in File › Options", app.session.author));
+                        ui.add_space(8.0);
+                    }
                     if app.ui.show_discord {
                         let (r, resp) = ui.allocate_exact_size(vec2(84.0, 22.0), Sense::click());
                         ui.painter().rect_filled(r, 11.0, if resp.hovered() { t.accent_text } else { t.accent });

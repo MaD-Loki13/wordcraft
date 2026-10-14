@@ -200,6 +200,14 @@ pub struct UiState {
     pub(crate) legacy_dark: Option<bool>,
     pub nav_tab: String,
     pub show_discord: bool,
+    /// DoeringCraft: framed by the Doering Dashboard (`?host=parent`). The page around it owns sharing, the account
+    /// and saving, so the title bar and the tab strip leave those out (no avatar, Share, Developer, Zotero); not saved.
+    #[serde(skip)]
+    pub embedded: bool,
+    /// DoeringCraft: the name the host page gives a new, untitled document (`?name=`), shown instead of `Document1`;
+    /// not saved.
+    #[serde(skip)]
+    pub untitled_name: Option<String>,
     /// User name (File › Options) for comments and tracked changes; empty keeps the default.
     pub author: String,
     /// Desktop: the main window's size and position, restored at the next launch.
@@ -288,6 +296,8 @@ impl Default for UiState {
             legacy_dark: None,
             nav_tab: "headings".into(),
             show_discord: false, // DoeringCraft: ohne Community-Knopf
+            embedded: false,
+            untitled_name: None,
             author: String::new(),
             window: None,
             language: i18n::AUTO.into(),
@@ -1339,7 +1349,7 @@ impl WordApp {
             Some(p) => p.file_stem().map(|s| s.to_string_lossy().to_string()).unwrap_or_else(|| tl!("Document1").into()),
             None => {
                 if self.session.doc.core.title.is_empty() {
-                    tl!("Document1").into()
+                    self.ui.untitled_name.clone().unwrap_or_else(|| tl!("Document1").into())
                 } else {
                     self.session.doc.core.title.clone()
                 }

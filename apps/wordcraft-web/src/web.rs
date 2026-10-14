@@ -79,6 +79,12 @@ pub fn start() {
                             Some("hell" | "light") => app.ui.theme = wordcraft_ui_egui::theme::Appearance::Light,
                             _ => {}
                         }
+                        // DoeringCraft: embedded, without the parts the Dashboard covers; `?name=` names a new document.
+                        app.ui.embedded = true;
+                        if let Some(name) = crate::host::query_param("name").filter(|n| !n.trim().is_empty()) {
+                            let stem = std::path::Path::new(&name).file_stem().map(|s| s.to_string_lossy().into_owned()).unwrap_or(name);
+                            app.ui.untitled_name = Some(stem);
+                        }
                         bridge.post_ready();
                     } else if !sample {
                         // No document to show: start on File › Home, as the desktop app does (#766).
