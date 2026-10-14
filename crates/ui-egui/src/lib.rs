@@ -287,7 +287,7 @@ impl Default for UiState {
             animations: theme::Animations::default(),
             legacy_dark: None,
             nav_tab: "headings".into(),
-            show_discord: true,
+            show_discord: false, // DoeringCraft: ohne Community-Knopf
             author: String::new(),
             window: None,
             language: i18n::AUTO.into(),

@@ -37,6 +37,10 @@ pub fn start() {
         {
             create.instance_descriptor.backends = eframe::wgpu::Backends::GL;
         }
+        // `?host=parent`: a same-origin page framing WordCraft (such as the Doering Dashboard)
+        // opens documents in it and stores what it saves (`host`).
+        let bridge = if crate::host::query_param("host").as_deref() == Some("parent") { crate::host::Bridge::new() } else { None };
+        let app_bridge = bridge.clone();
         let result = eframe::WebRunner::new()
             .start(
                 canvas,
@@ -58,16 +62,29 @@ pub fn start() {
                     let doc = if sample { wordcraft_engine::sample::sample_document() } else { wordcraft_engine::blank_document(&region) };
                     let mut session = Session::new(doc);
                     session.system_region = region;
-                    let mut app = WordApp::new(session, services(inbox.clone(), cc.egui_ctx.clone(), dirty, saves.clone()));
+                    let mut services = services(inbox.clone(), cc.egui_ctx.clone(), dirty, saves.clone());
+                    if let Some(bridge) = &app_bridge {
+                        bridge.connect(&mut services, inbox.clone(), cc.egui_ctx.clone());
+                    }
+                    let mut app = WordApp::new(session, services);
                     app.autosave = false;
-                    // No document to show: start on File › Home, as the desktop app does (#766).
-                    if !sample {
+                    if let Some(bridge) = &app_bridge {
+                        // In host mode the parent sends the document to edit; no Start screen meanwhile.
+                        if let Some(author) = crate::host::query_param("author") {
+                            crate::host::Bridge::set_author(&mut app, &author);
+                        }
+                        bridge.post_ready();
+                    } else if !sample {
+                        // No document to show: start on File › Home, as the desktop app does (#766).
                         app.start_screen();
                     }
-                    Ok(Box::new(WebShell { app, inbox, saves }))
+                    Ok(Box::new(WebShell { app, inbox, saves, bridge: app_bridge }))
                 }),
             )
             .await;
+        if let (Err(e), Some(bridge)) = (&result, &bridge) {
+            bridge.post_failed(&format!("{e:?}"));
+        }
         if let Some(el) = document.get_element_by_id(LOADING_ID) {
             match result {
                 Ok(()) => el.remove(),
@@ -87,6 +104,8 @@ struct WebShell {
     app: WordApp,
     inbox: Inbox,
     saves: Rc<PickerSaves>,
+    /// `?host=parent`: the page framing WordCraft hears saves and unsaved changes.
+    bridge: Option<crate::host::Bridge>,
 }
 
 /// Saves the browser's save picker finishes after `download` has returned (#728). The app marks
@@ -147,6 +166,9 @@ impl eframe::App for WebShell {
 
     fn ui(&mut self, ui: &mut egui::Ui, _frame: &mut eframe::Frame) {
         self.app.ui(ui);
+        if let Some(bridge) = &self.bridge {
+            bridge.sync(&self.app);
+        }
     }
 }
 
