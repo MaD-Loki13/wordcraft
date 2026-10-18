@@ -150,7 +150,7 @@ pub fn pointer(app: &mut WordApp, ui: &Ui, resp: &egui::Response, rects: &[Rect]
         }
         return true;
     }
-    if !available(app) || !(ui.input(|i| i.pointer.primary_pressed()) && resp.contains_pointer()) {
+    if !(available(app) && ui.input(|i| i.pointer.primary_pressed()) && resp.contains_pointer()) {
         return false;
     }
     let Some(p) = latest else { return false };
@@ -563,6 +563,28 @@ pub(crate) mod tests {
         button(&h, end, false);
         steps(&mut h, 3);
         assert!(widths(&mut h).is_empty(), "gone with the drag");
+    }
+
+    /// A cell selected with a click along its left edge: dragging its right border with the
+    /// mouse moves it in that cell's row only (#962).
+    #[test]
+    fn a_selected_cells_border_drags_in_its_row_only() {
+        let mut h = table_window();
+        let (above, b, c) = (cell(&mut h, 0, 1), cell(&mut h, 1, 1), cell(&mut h, 1, 2));
+        let y = b.y + b.h / 2.0;
+        let at = screen(&mut h, b.x + 4.5, y);
+        h.event(egui::Event::PointerMoved(at));
+        h.step();
+        button(&h, at, true);
+        h.step();
+        button(&h, at, false);
+        steps(&mut h, 2);
+        assert_eq!(h.state().session.cell_range().map(|r| (r.rows, r.cols)), Some(((1, 1), (1, 1))), "the cell is selected");
+        let (start, end) = (screen(&mut h, b.right(), y), screen(&mut h, b.right() + 30.0, y));
+        drag(&mut h, start, end);
+        let (b1, c1) = (cell(&mut h, 1, 1), cell(&mut h, 1, 2));
+        assert!((b1.w - (b.w + 30.0)).abs() < 1.0 && (c1.w - (c.w - 30.0)).abs() < 1.0, "{b1:?} {c1:?}");
+        assert!((cell(&mut h, 0, 1).right() - above.right()).abs() < 0.5, "the first row keeps its border");
     }
 
     /// Clicks inside a cell still place the caret (the border doesn't steal them), and Esc drops a

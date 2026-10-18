@@ -127,11 +127,17 @@ fn core_breaks(core: &[char], lang: ProofLang) -> (Vec<usize>, Source) {
     if lang == ProofLang::Bg && core.iter().all(|&c| crate::bg::is_letter(c)) {
         return (crate::bg::points(core), Source::Rules);
     }
+    if lang == ProofLang::Tr && core.iter().all(|&c| crate::tr::hyphen::is_letter(c)) {
+        return (crate::tr::hyphen::points(core), Source::Rules);
+    }
     if lang == ProofLang::Pt {
         return core_breaks_pt(core);
     }
     if lang == ProofLang::It {
         return core_breaks_it(core);
+    }
+    if lang == ProofLang::Ru && core.iter().all(|&c| crate::ru::is_cyrillic(c)) {
+        return (crate::ru::hyphen::points(core), Source::Heuristic);
     }
     let dict = Dictionary::en_us();
     let s: String = core.iter().collect();
@@ -850,7 +856,9 @@ mod tests {
     #[test]
     fn languages_without_patterns_keep_the_english_ones() {
         for w in ["hyphenation", "typography", "internationalization"] {
-            assert_eq!(hyphen_points_in(w, &Limits::default(), ProofLang::Other), hyphen_points(w, &Limits::default()), "{w}");
+            for lang in [ProofLang::Other, ProofLang::Cs] {
+                assert_eq!(hyphen_points_in(w, &Limits::default(), lang), hyphen_points(w, &Limits::default()), "{w}");
+            }
         }
     }
 

@@ -226,7 +226,7 @@ impl Bridge {
                 Ok(Value::Null)
             }
             "Document_cursorInField" => {
-                let at = s.sel.ordered().0;
+                let at = if s.sel.is_collapsed() { s.doc.past_field_ends(&s.sel.focus) } else { s.sel.ordered().0 };
                 let list = self.fields(s);
                 // The innermost field holding the caret: the last one starting before it.
                 let hit = list.iter().enumerate().rfind(|(_, f)| f.contains(&at));
@@ -374,6 +374,9 @@ impl Bridge {
         if !fields::can_insert_at(&s.doc, &s.sel.ordered().0) {
             return Err("a citation can't go here (only in the text, a footnote or an endnote)".into());
         }
+        if s.sel.is_collapsed() {
+            s.sel = Selection::caret(s.doc.past_field_ends(&s.sel.focus));
+        }
         self.fields(s);
         self.begin_edit(s);
         if (note == 1 || note == 2) && s.sel.focus.story == StoryRef::Body {
@@ -387,7 +390,7 @@ impl Bridge {
         let start = at.clone();
         let mut cur = s
             .doc
-            .insert_object(&start, InlineObject::FieldStart { instr: fields::PREFIX.to_string(), locked: false }, &base)
+            .insert_object(&start, InlineObject::FieldStart { instr: fields::PREFIX.to_string(), locked: false, dirty: false }, &base)
             .map_err(|e| e.to_string())?;
         match content {
             Some(frag) => cur = s.doc.insert_fragment(&cur, &frag).map_err(|e| e.to_string())?,

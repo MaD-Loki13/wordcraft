@@ -4,10 +4,10 @@ members = ["crates/*", "apps/*", "xtask"]
 default-members = ["crates/*", "apps/wordcraft", "apps/wordcraft-cli", "xtask"]
 
 [workspace.package]
-version = "0.6.1"
+version = "0.8.0"
 edition = "2024"
 license = "MIT OR Apache-2.0"
-rust-version = "1.90"
+rust-version = "1.95"
 repository = "https://github.com/storytold/wordcraft"
 
 [workspace.dependencies]
@@ -52,12 +52,17 @@ harfrust = "0.13"
 wuff = "0.2.9"
 vello_cpu = "0.2"
 image = { version = "0.25", default-features = false, features = ["png", "jpeg", "webp", "gif", "bmp", "tiff"] }
-krilla = { version = "0.8", features = ["pdf"] }
+craft-pdf = { git = "https://github.com/storytold/craft-libs", rev = "c3487320b2d1de657b860b3c8abb44e1f2b32bd8", version = "=0.1.0", default-features = false, features = ["write"] }
 quick-xml = "0.41"
 zip = { version = "3", default-features = false, features = ["deflate"] }
 # zlib streams (compressed metafile pictures in `.doc` drawings); already in the lock as a dependency of other crates.
 miniz_oxide = "0.8"
 cfb = "0.15"
+# Legacy text encodings (GBK/GB18030, Big5, Shift_JIS, EUC-KR, single-byte code pages) for plain
+# text and CSV recipient lists (#778): encoding_rs ((Apache-2.0 OR MIT) AND BSD-3-Clause) and its
+# detector chardetng (Apache-2.0 OR MIT), both pure Rust (Firefox's).
+encoding_rs = "0.8"
+chardetng = "1"
 # Password-protected (agile-encrypted) Word documents: pure-Rust RustCrypto primitives.
 aes = "0.9"
 sha1 = "0.11"
@@ -95,3 +100,7 @@ opt-level = 3
 lto = "thin"
 codegen-units = 16
 debug = 0
+
+# Required by craft-pdf: the backend rejects writers that failed during unwinding.
+[patch.crates-io]
+krilla = { git = "https://github.com/storytold/craft-libs", rev = "c3487320b2d1de657b860b3c8abb44e1f2b32bd8" }

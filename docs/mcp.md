@@ -45,8 +45,8 @@ config works across the suite) keep the agent to the folders you give it:
   `styles.organizer` and `styles.copyFrom` read. The pictures an opened HTML file names are read
   from beside that file, so they are inside the read root too (a link that leads out is not followed).
 - Every file a command writes must lie inside the **write root**: `save_document`, `file.save`,
-  `file.saveAs`, `file.exportPdf`, `file.exportPng`, `file.printPdf`, `file.saveTemplate`, and `mailings.finish` with
-  a `path`.
+  `file.saveAs`, `file.rename` (the file and its new name), `file.exportPdf`, `file.exportPng`, `file.printPdf`,
+  `file.saveTemplate`, and `mailings.finish` with a `path`.
 - Read and write access are separate. Give the same folder twice for both; a root left out grants
   none of its access (with only `--automation-read-root`, nothing can be written to disk). Without
   either flag nothing changes.
@@ -93,6 +93,9 @@ files it was given rather than guarding against other software on the computer.
 | `render_page` | a page as PNG |
 | `parity` | feature coverage |
 | `screenshot`, `click`, `key`, `ui_inspect` | app only (`--connect`) |
+
+`insert.picture` and `insert.icon` leave the caret after the new picture, so typing next doesn't
+replace it; Picture Format commands (`picture.*`, `arrange.*`) still act on it.
 
 Resources: `wordcraft://document` (inspect) and `wordcraft://commands`.
 
@@ -176,3 +179,8 @@ the distance from the text). Missing fields are `none`, 0, no colour and 0, so a
 | `kinsoku`, `wordWrap`, `overflowPunct`, `autoSpaceDE`, `autoSpaceDN`, `snapToGrid` | bool | East Asian typography; unset = on |
 | `topLinePunct` | bool | East Asian typography; unset = off |
 | `numChange`, `fmtChange` | | Track Changes bookkeeping |
+
+`para.set` also takes `"onPage": {"align"?: "left|center|right|justify|distribute", "left"?: pt,
+"right"?: pt}`: the alignment and indents as seen on the page, which each selected paragraph turns
+into its own start and end once `props` (a `bidi` in it, say) is applied. The Paragraph dialog sends
+only the fields that changed this way, as one command and so one undo step.

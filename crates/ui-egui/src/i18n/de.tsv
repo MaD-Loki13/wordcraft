@@ -92,6 +92,7 @@
 	Enter formatting for number:	Formatierung für die Nummer eingeben:
 	Follow number with:	Der Nummer folgt:
 	Formatting	Formatierung
+	In the margin	Am Rand
 	Include level number from:	Ebenennummer übernehmen aus:
 	Ink	Freihand
 	Insertions and Deletions	Einfügungen und Löschungen
@@ -110,6 +111,7 @@
 	Number alignment:	Nummernausrichtung:
 	Number format	Nummernformat
 	Number style for this level:	Nummernstil für diese Ebene:
+	Only for the selected text	Nur für den ausgewählten Text
 	Outside border	Äußere Rahmenlinie
 	Reopen	Erneut öffnen
 	Restart list after:	Liste neu starten nach:
@@ -139,6 +141,9 @@
 	Bold	Fett
 	Bookmark	Textmarke
 	Bookmark name:	Textmarkenname:
+	Delete Bookmark	Textmarke löschen
+	Hidden bookmarks	Ausgeblendete Textmarken
+	Sort by:	Sortieren nach:
 	Border Painter	Rahmenlinien-Maler
 	Border\nPainter	Rahmenlinien-\nMaler
 	Borders	Rahmenlinien
@@ -451,6 +456,8 @@
 	Labels	Etiketten
 	Landscape	Querformat
 	Language	Sprache
+	{language} (no dictionary)	{language} (kein Wörterbuch)
+	No spelling dictionary for {language} is installed, so it isn't checked. WordCraft looks for the Hunspell dictionary {name} in the WORDCRAFT_DICTIONARIES folder and in the usual system locations.	Für {language} ist kein Rechtschreibwörterbuch installiert, daher wird die Sprache nicht geprüft. WordCraft sucht das Hunspell-Wörterbuch {name} im Ordner WORDCRAFT_DICTIONARIES und an den üblichen Systemorten.
 	Lasso	Lasso
 	Last Column	Letzte Spalte
 	Last commit	Letzter Commit
@@ -506,7 +513,7 @@
 	Multiple Pages	Mehrere Seiten
 	Name (A–Z)	Name (A–Z)
 	Name:	Name:
-	Narrow  0.5" all	Schmal  0,5" rundum
+	Narrow  {size} all	Schmal  {size} rundum
 	Navigation	Navigation
 	Navigation Pane	Navigationsbereich
 	New	Neu
@@ -533,7 +540,7 @@
 	Nonbreaking Hyphen	Geschützter Bindestrich
 	Nonbreaking Space	Geschütztes Leerzeichen
 	None	Keine
-	Normal  1" all	Normal  1" rundum
+	Normal  {size} all	Normal  {size} rundum
 	Normal Style	Formatvorlage „Standard“
 	Not available right now	Derzeit nicht verfügbar
 	Not saved	Nicht gespeichert
@@ -1351,6 +1358,7 @@
 	Demote	Tiefer stufen
 	Go Back	Zurückspringen
 	Toggle Unicode Character	Unicode-Zeichen umschalten
+	Type Character Code	Zeichencode eingeben
 	Toggle Field Codes	Feldfunktionen ein/aus
 	Edit Field Code	Feldfunktion bearbeiten
 	Unlink Fields	Feldverknüpfungen aufheben
@@ -1436,6 +1444,8 @@
 	No words yet. Add to Dictionary on a misspelled word puts it here.	Noch keine Wörter. „Zum Wörterbuch hinzufügen“ bei einem falsch geschriebenen Wort legt es hier ab.
 	Overtype	Überschreiben
 	Overtype (typing replaces the characters after the caret)	Überschreiben (die Eingabe ersetzt die Zeichen nach der Einfügemarke)
+	Show alignment guides when moving pictures and shapes	Ausrichtungslinien beim Verschieben von Bildern und Formen anzeigen
+	Moved objects snap to the page's edges and centre, the margins and other objects. Hold Alt to move freely.	Verschobene Objekte rasten an den Rändern und der Mitte der Seite, an den Seitenrändern und an anderen Objekten ein. Mit gedrückter Alt-Taste frei verschieben.
 	Page display	Seitenanzeige
 	Paragraph marks	Absatzmarken
 	Personalize	Personalisieren
@@ -1548,6 +1558,11 @@
 	Add Font…	Schriftart hinzufügen…
 	Added Fonts	Hinzugefügte Schriftarten
 	Remove Added Font	Hinzugefügte Schriftart entfernen
+	Load System Installed Fonts…	Installierte Systemschriftarten laden…
+	All system fonts are already available.	Alle Systemschriftarten sind bereits verfügbar.
+	Local font access is not supported by your browser.	Lokaler Schriftartenzugriff wird von Ihrem Browser nicht unterstützt.
+	Local font access was denied.	Zugriff auf lokale Schriftarten wurde verweigert.
+	Loaded {count} system fonts.	{count} Systemschriftarten geladen.
 	Recent Colors	Zuletzt verwendete Farben
 	More Colors…	Weitere Farben…
 	Standard	Standard
@@ -2010,6 +2025,7 @@
 	Hyphenation Options…	Silbentrennungsoptionen…
 	Hyphenation zone:	Silbentrennzone:
 	Italian	Italienisch
+	Croatian	Kroatisch
 	Japanese	Japanisch
 	Korean	Koreanisch
 	Limit consecutive hyphens to:	Aufeinanderfolgende Trennstriche begrenzen auf:
@@ -2066,6 +2082,41 @@
 	Hindi	Hindi
 	Context	Kontext
 	System	System
+	Odd Banded Rows	Ungerade gestreifte Zeilen
+	Even Banded Rows	Gerade gestreifte Zeilen
+	Odd Banded Columns	Ungerade gestreifte Spalten
+	Even Banded Columns	Gerade gestreifte Spalten
+	Top Left Cell	Zelle oben links
+	Top Right Cell	Zelle oben rechts
+	Bottom Left Cell	Zelle unten links
+	Bottom Right Cell	Zelle unten rechts
+	Inside Horizontal Border	Innere horizontale Rahmenlinie
+	Inside Vertical Border	Innere vertikale Rahmenlinie
+# Mail merge: filter and sort recipients (#778)
+	Filter Recipients	Empfänger filtern
+	Sort Recipients	Empfänger sortieren
+	Filter and Sort	Filtern und Sortieren
+	And	Und
+	Or	Oder
+	Comparison	Vergleich
+	Compare to	Vergleichen mit
+	Add Condition	Bedingung hinzufügen
+	Remove condition	Bedingung entfernen
+	Sort by	Sortieren nach
+	Then by	Dann nach
+	Ascending	Aufsteigend
+	Descending	Absteigend
+	Equal to	Gleich
+	Not equal to	Ungleich
+	Less than	Kleiner als
+	Greater than	Größer als
+	Less than or equal	Kleiner oder gleich
+	Greater than or equal	Größer oder gleich
+	Is blank	Ist leer
+	Is not blank	Ist nicht leer
+	Contains	Enthält
+	Does not contain	Enthält nicht
+	{count} of {total} recipients will be merged.	{count} von {total} Empfängern werden zusammengeführt.
 	Show KeyTips (Alt or F10)	Zugriffstasten anzeigen (Alt oder F10)
 	Reading	Lesen
 	Reading Column Width	Spaltenbreite beim Lesen
@@ -2075,8 +2126,23 @@
 	Correct accidental usage of cAPS LOCK key	Unbeabsichtigtes Verwenden der fESTSTELLTASTE korrigieren
 	Region:	Region:
 	Automatic ({region})	Automatisch ({region})
+	Text of the nearest paragraph with a given style (running headers)	Text des nächsten Absatzes mit einer bestimmten Formatvorlage (lebende Kolumnentitel)
+	Style name:	Formatvorlagenname:
+	Take the last match on the page	Letzten Treffer auf der Seite nehmen
+	Show its list number	Seine Listennummer zeigen
+	Show its number relative to this field	Seine Nummer bezogen auf dieses Feld zeigen
+	Show its number with all higher levels	Seine Nummer mit allen höheren Ebenen zeigen
+	Number only, without the label's words	Nur die Nummer, ohne die Wörter der Beschriftung
+	Add whether it is above or below	Angeben, ob er darüber oder darunter steht
 	Search	Suchen
 	Title Bar	Titelleiste
+	Copy to	Kopieren nach
+
+# Document naming and account controls.
+	Rename Document	Dokument umbenennen
+	Document name	Dokumentname
+	Rename	Umbenennen
+	Account	Konto
 	Privacy Options	Datenschutzoptionen
 	Trust Center	Sicherheitscenter
 	Privacy for this document	Datenschutz für dieses Dokument
@@ -2084,6 +2150,88 @@
 	Leave out the date and time of comments and tracked changes when saving	Beim Speichern Datum und Uhrzeit von Kommentaren und nachverfolgten Änderungen weglassen
 	The document you are editing keeps the names and dates; only the saved file leaves them out.	Das bearbeitete Dokument behält Namen und Daten; nur die gespeicherte Datei lässt sie weg.
 	Privacy Settings	Aktuelle Datenschutzeinstellungen
+	Waiting for the save to finish…	Warten, bis das Speichern abgeschlossen ist…
+	Saving {name} was cancelled, so it is still open and nothing was lost.	Das Speichern von {name} wurde abgebrochen. Das Dokument ist weiterhin geöffnet und nichts ist verloren gegangen.
+	Paper	Papier
+	Paper size:	Papierformat:
+	Custom size	Benutzerdefiniertes Format
+	More Paper Sizes…	Weitere Papierformate…
+	The margins don't fit on a page this size; make the margins smaller first.	Die Ränder passen nicht auf eine Seite dieser Größe; verkleinern Sie zuerst die Ränder.
+	Full Screen	Vollbild
+	Full\nScreen	Voll-\nbild
+	Use the browser's full screen (F11)	Verwenden Sie den Vollbildmodus des Browsers (F11)
+
+# #1128: size labels (Mailings, Layout › Size), status-bar messages, Reading Mode and Go To
+	{name}   {height} × {width} in	{name}   {height} × {width} Zoll
+	{name}   {height} × {width} mm	{name}   {height} × {width} mm
+	{width} × {height} mm	{width} × {height} mm
+	{kind}, {columns} × {rows}, {size} ({paper})	{kind}, {columns} × {rows}, {size} ({paper})
+	Researcher needs an online service; WordCraft keeps your documents offline.	Der Recherche-Assistent braucht einen Onlinedienst; WordCraft behält Ihre Dokumente offline.
+	These settings will be used for new documents.	Diese Einstellungen werden für neue Dokumente verwendet.
+	can't split at the first row	die Tabelle kann nicht an der ersten Zeile geteilt werden
+	select two or more cells to merge	wählen Sie zum Verbinden zwei oder mehr Zellen aus
+	there is no ink to replay	es gibt keine Freihandeingabe zum Wiedergeben
+	there's no citation after the caret	nach der Einfügemarke steht kein Zitat
+	this item is already at the top level	dieses Element ist bereits auf der obersten Ebene
+	Envelope #10	Umschlag Nr. 10
+	Envelope DL	Umschlag DL
+	Reading Mode	Lesemodus
+	Column width	Spaltenbreite
+	Text size	Textgröße
+	Edit Document	Dokument bearbeiten
+	Go to what:	Gehe zu:
+	Type +2 or -1 to move from the page you are on.	Geben Sie +2 oder -1 ein, um von der aktuellen Seite aus zu springen.
+	Suggested	Vorschläge
+	Set Proofing Language…	Sprache für die Korrekturhilfen festlegen…
+	Language Preferences…	Spracheinstellungen…
+	Printer	Drucker
+	Select a printer	Drucker auswählen
+	Refresh printers	Drucker aktualisieren
+	Two-sided printing	Beidseitiges Drucken
+	Printer default	Druckerstandard
+	One-sided	Einseitig
+	Two-sided: long edge	Beidseitig: lange Kante
+	Two-sided: short edge	Beidseitig: kurze Kante
+	Grayscale	Graustufen
+	Finding printers…	Drucker werden gesucht…
+	No printers found. Configure a system printer or export a PDF.	Keine Drucker gefunden. Richten Sie einen Systemdrucker ein oder exportieren Sie ein PDF.
+	Printer discovery failed.	Druckersuche fehlgeschlagen.
+	Submitting print job…	Druckauftrag wird gesendet…
+	Print job submitted.	Druckauftrag gesendet.
+	Print job submitted: {receipt}	Druckauftrag gesendet: {receipt}
+	Print failed: the printing worker stopped.	Drucken fehlgeschlagen: Der Druckvorgang wurde angehalten.
+	Print settings	Druckeinstellungen
+	Submit print job	Druckauftrag senden
+
+# Dictionaries folder (#1063)
+	Dictionaries	Wörterbücher
+	Dictionaries folder:	Wörterbuchordner:
+	Not set: the system's usual places	Nicht festgelegt: die üblichen Orte des Systems
+	Hunspell .aff and .dic files here (pl_PL, pt_BR, it_IT, hr_HR, tr_TR) are used before the system's.	Hunspell-Dateien (.aff und .dic) in diesem Ordner (pl_PL, pt_BR, it_IT, hr_HR, tr_TR) haben Vorrang vor denen des Systems.
+	{language}: {file}	{language}: {file}
+	{language}: no dictionary found	{language}: kein Wörterbuch gefunden
+
+# Backstage › Recover (#586)
+	Recover	Wiederherstellen
+
+# Page Setup › Mirror margins (#1239)
+	Mirror margins	Gegenüberliegende Seiten
+
+# Insert Hyperlink › Place in This Document (#1370)
+	Existing File or Web Page	Datei oder Webseite
+	Link to:	Link zu:
+	Place in This Document	Aktuelles Dokument
+# Table Layout › Sort dialog (#1205)
+	Column {n}	Spalte {n}
+	Header row	Überschriftszeile
+	No header row	Keine Überschriftszeile
+	My list has	Meine Liste hat
+# Table Layout › Formula dialog (#1210)
+	Formula:	Formel:
+	Paste function:	Funktion einfügen:
+# Reading Mode column widths (#1040)
+	Narrow	Schmal
+	Medium	Mittel
 # DoeringCraft: entries the German catalog lacked (written for the Doering Dashboard, 14.10.2026).
 	Wildcards (regex)	Platzhalter (regulärer Ausdruck)
 	Track\nChanges	Änderungen\nnachverfolgen
@@ -2472,3 +2620,44 @@ preview	Title	Beispiel
 	Use "an" before a vowel sound	„an“ vor einem Vokal verwenden
 	Use "a" before a consonant sound	„a“ vor einem Konsonanten verwenden
 	The spelling and grammar check is complete.	Die Rechtschreib- und Grammatikprüfung ist abgeschlossen.
+# DoeringCraft: Nachtrag zu v0.8.0 (18.10.2026)
+	Bookmarks	Textmarken
+	Continue without restoring	Ohne Wiederherstellen fortfahren
+	Couldn't save {name}, so it is still open and nothing was lost: {error}	{name} konnte nicht gespeichert werden. Das Dokument bleibt geöffnet, es ist nichts verloren: {error}
+	Crop on the page works on unturned pictures: set Rotation to 0° first, or use the crop boxes	Zuschneiden auf der Seite geht nur bei nicht gedrehten Bildern: Setzen Sie die Drehung zuerst auf 0° oder verwenden Sie die Zuschneidefelder
+	Discard	Verwerfen
+	Discard the recovery copy of {name}?	Wiederherstellungskopie von {name} verwerfen?
+	Discard…	Verwerfen…
+	Enter bookmark name:	Textmarkenname:
+	Find “{text}” in the document	„{text}“ im Dokument suchen
+	For which item:	Für welchen Eintrag:
+	Insert reference to:	Verweisen auf:
+	Local recovery is unavailable or still loading.	Die lokale Wiederherstellung ist nicht verfügbar oder lädt noch.
+	No recovery copies.	Keine Wiederherstellungskopien.
+	Nothing of this type in the document.	Im Dokument gibt es nichts von diesem Typ.
+	Recovery copy	Wiederherstellungskopie
+	Recovery is disabled while this document has a password.	Solange das Dokument ein Kennwort hat, ist die Wiederherstellung ausgeschaltet.
+	Reference type:	Verweistyp:
+	Restore	Wiederherstellen
+	Restore opens an unsaved copy. Your original file stays unchanged.	„Wiederherstellen“ öffnet eine ungespeicherte Kopie. Ihre Originaldatei bleibt unverändert.
+	Select a place in this document:	Wählen Sie eine Stelle in diesem Dokument aus:
+	This cannot be undone. Your original file stays unchanged.	Das lässt sich nicht rückgängig machen. Ihre Originaldatei bleibt unverändert.
+	This document has no bookmarks.	Dieses Dokument hat keine Textmarken.
+	Top of the Document	Dokumentanfang
+	Type a page number, or +2 / -1.	Geben Sie eine Seitenzahl ein oder +2 / -1.
+	Wait for the print job to finish submitting before closing.	Warten Sie vor dem Schließen, bis der Druckauftrag übergeben ist.
+	select a picture first	wählen Sie zuerst ein Bild aus
+	{paper}   {width} × {height}	{paper}   {width} × {height}
+	Above/below	Oben/unten
+	Bookmark text	Textmarkeninhalt
+	Entire caption	Gesamte Beschriftung
+	Only label and number	Nur Kategorie und Nummer
+	Page number	Seitenzahl
+	Heading	Überschrift
+	Heading text	Überschriftentext
+	Recover documents	Dokumente wiederherstellen
+	Auto orientation	Automatische Ausrichtung
+	A print job is already being submitted.	Ein Druckauftrag wird bereits übergeben.
+	Book Title	Buchtitel
+	DRAFT	ENTWURF
+	x bar	x quer
